@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal General Stores</title>
+  <style>
+    :root {
+      --blue: #1565c0;
+      --yellow: #ffd54f;
+      --bg-light: #f5f7fa;
+      --text-dark: #1e293b;
+    }
+    body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); }
+    header { background: linear-gradient(90deg, var(--blue), #1e88e5); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: white; }
+    .logo svg { width: 48px; height: 48px; }
+    nav a { color: white; text-decoration: none; margin: 0 0.5rem; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    .hero { max-width: 1100px; margin: 2rem auto; padding: 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+    .hero-text { flex: 1 1 400px; }
+    .hero img { flex: 1 1 400px; width: 100%; border-radius: 10px; }
+    .search-bar input { width: 70%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; }
+    .search-bar button { padding: 0.75rem 1rem; background: var(--blue); color: white; border: none; border-radius: 6px; cursor: pointer; }
+    .categories button { margin: 0.25rem; padding: 0.5rem 1rem; border: none; border-radius: 20px; background: var(--yellow); color: var(--text-dark); cursor: pointer; font-weight: 600; }
+    .products { max-width: 1100px; margin: 2rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1rem; }
+    .product { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+    .product img { width: 100%; height: 180px; object-fit: cover; }
+    .product .info { padding: 1rem; }
+    .product h4 { margin: 0.5rem 0; }
+    .product p { font-size: 0.9rem; color: #555; }
+    .product .price { color: var(--yellow); font-weight: bold; margin: 0.5rem 0; }
+    .product a.btn { display: inline-block; background: var(--blue); color: white; text-align: center; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; }
+    footer { background: var(--blue); color: white; padding: 2rem 1rem; }
+    footer .columns { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    footer h5 { margin-top: 0; }
+    footer form input { width: 70%; padding: 0.5rem; border: none; border-radius: 6px; margin-right: 0.5rem; }
+    footer form button { background: var(--yellow); border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    footer .bottom { text-align: center; margin-top: 1rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Royal General Stores logo">
+        <rect x="6" y="6" width="88" height="88" rx="12" fill="#ffd54f" />
+        <path d="M20 72 L30 40 L50 30 L70 40 L80 72 Z" fill="#1565c0" />
+        <text x="50" y="55" font-size="10" text-anchor="middle" fill="#fff" font-weight="700">RGS</text>
+      </svg>
+      <div>
+        <h1 style="margin:0;">Royal General Stores</h1>
+        <p style="font-size:0.9rem;opacity:0.9;margin:0;">Find great products — buy on Amazon</p>
+      </div>
+    </a>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Curated picks for everyday life</h2>
+      <p>We collect popular, reliable products and redirect you to Amazon to complete your purchase. Safe, simple, and fast.</p>
+      <div class="search-bar" style="margin-top:12px;">
+        <input type="text" placeholder="Search for products..." aria-label="Search" />
+        <button>Browse</button>
+      </div>
+      <div class="categories" style="margin-top:12px;">
+        <button>All</button>
+        <button>Home</button>
+        <button>Electronics</button>
+        <button>Apparel</button>
+      </div>
+    </div>
+    <img src="https://via.placeholder.com/640x420?text=Royal+General+Stores" alt="Royal General Stores" />
+  </section>
+
+  <section id="products" class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/360x240?text=Ceramic+Mug" alt="Mug" />
+      <div class="info">
+        <h4>Everyday Ceramic Mug</h4>
+        <p>Sturdy ceramic mug, dishwasher safe.</p>
+        <div class="price">$9.99</div>
+        <a class="btn" href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Buy on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/360x240?text=Bluetooth+Earbuds" alt="Earbuds" />
+      <div class="info">
+        <h4>Bluetooth Earbuds</h4>
+        <p>Wireless earbuds with long battery life.</p>
+        <div class="price">$29.99</div>
+        <a class="btn" href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Buy on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/360x240?text=Cotton+T-Shirt" alt="T-Shirt" />
+      <div class="info">
+        <h4>Classic Cotton T-Shirt</h4>
+        <p>Comfortable everyday tee — multiple sizes.</p>
+        <div class="price">$14.50</div>
+        <a class="btn" href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Buy on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/360x240?text=LED+Desk+Lamp" alt="Lamp" />
+      <div class="info">
+        <h4>LED Desk Lamp</h4>
+        <p>Adjustable brightness with USB charging.</p>
+        <div class="price">$22.00</div>
+        <a class="btn" href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Buy on Amazon →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="columns">
+      <div>
+        <h5>Royal General Stores</h5>
+        <p>A simple storefront that redirects customers to Amazon for secure checkout. Replace product links with your Amazon affiliate URLs.</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <p>
+          <a href="#products" style="color:white;text-decoration:underline;">Products</a><br />
+          <a href="#about" style="color:white;text-decoration:underline;">About</a><br />
+          <a href="#" style="color:white;text-decoration:underline;">Privacy</a>
+        </p>
+      </div>
+      <div>
+        <h5>Stay in touch</h5>
+        <form onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Your email" aria-label="Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">© <script>document.write(new Date().getFullYear())</script> Royal General Stores — Redirect purchases to Amazon. All rights reserved.</div>
+  </footer>
+</body>
+</html>
